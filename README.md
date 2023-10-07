@@ -1,6 +1,6 @@
 # Numerical Analysis with Julia
 This course is offered at TED University, and is mainly about optimization methods used in data science from practical point of view. We do not promise a complete optimization course, rather we shall talk abour practical applications of optimization methods. The main goal of this course is to find out what happens under the hood. Things are done from scratch as much as possible (apart from automatic differentiation). As I pace, I will upload the documents. 
-The programming language used for labs is particularly chosen Julia, as it rocks for numerical computations. Please see Julia_in_6_Hours directory for a refresher.  
+The programming language used for labs is particularly chosen Julia, as it rocks for numerical computations. Please see Julia_in_5_Hours directory for a refresher.  
 
 ## Curriculum
 - Get started with Julia (Easy peasy introduction, This will take may be up to 3 weeks including going over simple old school numerical analysis implementations),

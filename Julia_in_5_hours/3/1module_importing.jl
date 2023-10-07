@@ -3,5 +3,4 @@ using StatsBase
 using Flux
 using Plots
 
-
-@show names(Flux)
+@show names(LinearAlgebra)

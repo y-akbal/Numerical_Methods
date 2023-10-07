@@ -45,3 +45,15 @@ f(l(t(2)))
 ##instead we have 
 2 |> t |> l |> f
 
+##Functions with optional args
+function f(x; y = 2)
+    return x+y
+end
+
+## functions with kwargs
+function m(l; kwargs::Dict)
+    return kwargs[:t]
+    
+ end
+m(2;)
+Dict("t"=>2)

@@ -10,7 +10,7 @@ end
 
 
 i::Int64 = 1
-while i <= length(A)
+while true
     println(i)
     i += 1
 end

@@ -19,6 +19,7 @@ df = DataFrame(A, ["a", "b", "c"])
 ## read csv files !!
 csv = CSV.read("test.csv", DataFrame)
 df = DataFrame(csv)
+
 df[:, 1] = randn(10) ### change the first column
 ## write csv files!!
 CSV.write("test.csv", df)    

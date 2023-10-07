@@ -12,12 +12,12 @@ end
 
 #Let's create an instance 
 l = A(2,3)
+
 l.a
 ## To get property names!!!
 propertynames(l)
 ## Once you create a struct you can not alter it.
 ## because Immutable (located in -- fast) 
-l.b = 2
 
 
 mutable struct B
@@ -26,6 +26,7 @@ mutable struct B
 end
 
 b_ = B(2, randn())
+
 b__ = B(2, randn(Float32))
 
 B() ## No matching method, throws an error, to avoid this we have two options!!! 
@@ -34,6 +35,7 @@ B() ## No matching method, throws an error, to avoid this we have two options!!!
     a::Integer = 5
     b::AbstractFloat = randn()
 end
+
 C()  ##we keyword def
 
 ## There is another way of doing it

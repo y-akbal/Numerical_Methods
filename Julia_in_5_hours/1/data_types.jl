@@ -8,6 +8,8 @@
 =#
 
 x = 1
+typeof(x)
 x = 1.0
+typeof(x)
 x = "Hopppa"
 typeof(x)

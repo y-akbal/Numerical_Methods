@@ -10,9 +10,9 @@ end
 f(x) ## will not work
 
 ##Below will work 
-@time f.(x)
+@btime f.(x)
 
-@time map(f, x)
+@btime map(f, x)
 
 ## How about vectors?
 t = randn(100, 100)
@@ -20,7 +20,7 @@ t = randn(100, 100)
 ## one way
 @benchmark t.*t
 
-@benchmark @. f(t)
+@. f(rand(10,10))
 
 @benchmark f.(t)
 
@@ -43,17 +43,19 @@ g(2) do x
 end
 
 ### Local scopes
-x = begin y = 2
-    t = 3
-    y+t
+x = begin w = 2
+    q = 3
+    q+w
 end
+
 
 ## No pollution to outside!!!
 m = let 
-    q = 2
-    j = 2
-    q+j
+    l = 4
+    g = 2
+    g+l
 end
 
-
+l
+g
     

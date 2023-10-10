@@ -11,7 +11,8 @@
 (1+2.0)::AbstractFloat ## This will not thrown an exception
 
 ## See here for types https://juliateachingctu.github.io/Julia-for-Optimization-and-Learning/stable/lecture_06/compositetypes/
-
+## See here for hiearchy of types 
+## https://commons.wikimedia.org/wiki/File:Type-hierarchy-for-julia-numbers.png
 x = 2
 typeof(x)
 t = Float32(x)

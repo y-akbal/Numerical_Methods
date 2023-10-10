@@ -1,4 +1,4 @@
-struct Dual{T <: Real}
+struct Dual{T <: Real} <: Number
     v::T
     ∂::T
     end
@@ -8,11 +8,10 @@ Base.:+(a::Dual, b::Dual) = Dual(a.v + b.v, a.∂ + b.∂)
 Base.:-(a::Dual, b::Dual) = Dual(a.v - b.v, a.∂ - b.∂)
 Base.:*(a::Dual, b::Dual) = Dual(a.v * b.v, a.v*b.∂ + b.v*a.∂)
 Base.:*(c::Real, b::Dual) = Dual(c*b.v, c*b.∂) 
-#Base.:/(a::Dual, b::Dual) = Dual()
 #Base.sin
 Base.exp(a::Dual) = exp(a.v)*(Dual(1,a.∂))
 
-#Base.sqrt
+Base.sqrt(a::Dual) = Dual(sqrt(a.v), a.∂*sqrt(a.v)/(2*a.v))
 Base.log(a::Dual) = Dual(log(a.v), a.∂/a.v)
 
 
@@ -22,7 +21,7 @@ function Base.:^(a::Dual, i::Int)
     elseif  i == 1
         return a
     else
-    return a.v^i +ia.v^(i-1)a.∂
+    return Dual((a.v)^i,(i*(a.v)^(i-1))*a.∂)
     end
 end
 
@@ -39,9 +38,11 @@ function Base.max(a::Dual, b::Int)
 end
 
 x = Dual(1.23,1.0)
+
 f(x) = x^10+x^70
-f(x).∂
+f(x)
 f_(x) = 10x^9+70*x^69
+f_(1.23)
 (f(1.23+1e-5) - f(1.23))/1e-5
 f_(1.23)
 f(x)
@@ -58,6 +59,8 @@ f(Dual(3,1))
 ### Let's show off a bit!!!
 Base.show(io::IO, x::Dual) = print(io, "$(x.v)+"*"$(x.∂)"*"ϵ")
 (Dual(2,2)+Dual(3,4))^2-Dual(1,2)
+
+
 
 
 @__DIR__

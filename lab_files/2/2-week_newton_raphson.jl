@@ -1,7 +1,7 @@
 
 ## The below dude is for 
 function derivative(f::Function, x; h::Float64 = 1e-4)
-    return (f(x+h) -f(x-h))/(2h)
+    return nothing
 end
 
 

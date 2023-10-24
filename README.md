@@ -5,13 +5,12 @@ The programming language used for labs is particularly chosen Julia, as it rocks
 ## Curriculum
 - Get started with Julia (Easy peasy introduction, This will take may be up to 3 weeks including going over simple old school numerical analysis implementations),
 - Curve Fitting - Polynomial Regression - Harmonic Regression,
-- Cubic Splines,
 - Numerical Differentiation vs Automatic Differentiation,
 - Gradient Descent (Application: Linear and Logistic Regression from scratch),
 - Steepest Descent,
 - Second Order Methods,
 - Conjugate Direction Methods,
-- Penalty Methods,
+- Constrained Optimization: Duality, Projection Methods, Penalty Methods
 - Implementation of Support Vector Machines From Scratch,
 - Some First Order Methods in Deep Learning,
 - Applications to Neural Networks (with Flux),
